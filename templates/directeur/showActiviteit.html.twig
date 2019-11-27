@@ -1,0 +1,77 @@
+
+{% extends 'base.html.twig' %}
+{% block body %}
+{#<p>activiteit naam: </p>{{ activiteit.naam }} <br>#}
+{#<p>activiteit: beschrijving</p>{{ activiteit.beschrijving }} <br>#}
+{#    <p>activiteit: duur</p> {{ activiteit.duur }} <br>#}
+{#    <p>activiteit: prijs</p>{{ activiteit.prijs }} <br>#}
+    <div class="wrapper">
+        <header>
+            <img src="{{ asset('img/logo-training-fatory-HD.png') }}" width="100%" height="400"  alt="....">
+        </header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="lessen.php">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">vechtsporten</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registreren.php">registreren</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </nav>
+        <article>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Waarom Training factory? – boxen is niet zo geweldadig als je denkt</h5>
+                    <p class="card-text"> training factory is voor jong en oud wij halen het meeste uit boxen en andere sporten. vechtsporten worden vaak gezien als een geweldadige bezigheid wij kunnen laten zien dat dat niet zo hoeft te zijn
+
+                        u kunt op deze site informatie vinden over de vechtsporten die wij bieden</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+            </div>
+        </article>
+        <div class="card-group">
+            <div class="card">
+                <img src="{{ asset('img/karate2.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{asset('img/bag.jpg')}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{{ asset('img/judo.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>test</p>
+        </footer>
+    </div>
+
+
+{% endblock %}
