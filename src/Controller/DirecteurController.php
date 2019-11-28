@@ -16,7 +16,7 @@ class DirecteurController extends AbstractController
     /**
      * @Route("/activiteit/toevoegen", name="create_activiteit")
      */
-    public function createActiviteit(): Response
+    public function createActiviteitAction(): Response
     {
 
         $entityManager=$this->getDoctrine()->getManager();
@@ -35,9 +35,9 @@ class DirecteurController extends AbstractController
     }
 
     /**
-     * @Route("/activiteit/{id}", name="activiteit_show")
+     * @Route("directeur/activiteit/{id}", name="dir_activiteit_show")
      */
-    public function show($id)
+    public function showAction($id)
     {
         $activiteit = $this->getDoctrine()
             ->getRepository(Activiteiten::class)

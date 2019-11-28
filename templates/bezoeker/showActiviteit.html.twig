@@ -1,0 +1,46 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{#<p>activiteit naam: </p>{{ activiteit.naam }} <br>#}
+{#<p>activiteit: beschrijving</p>{{ activiteit.beschrijving }} <br>#}
+{#    <p>activiteit: duur</p> {{ activiteit.duur }} <br>#}
+{#    <p>activiteit: prijs</p>{{ activiteit.prijs }} <br>#}
+     <div class="wrapper">
+    {% block nav %} {% include 'bezoeker/navbarBezoeker.html.twig' %} {% endblock %}
+
+        <article>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Waarom Training factory? – boxen is niet zo geweldadig als je denkt</h5>
+                    <p class="card-text"> training factory is voor jong en oud wij halen het meeste uit boxen en andere sporten. vechtsporten worden vaak gezien als een geweldadige bezigheid wij kunnen laten zien dat dat niet zo hoeft te zijn
+
+                        u kunt op deze site informatie vinden over de vechtsporten die wij bieden</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+            </div>
+        </article>
+
+        <div class="card-group">
+            {% for a in activiteiten %}
+            <div class="card">
+                <img src="{{ asset('img/' ~ a.naam ~ '.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{a.naam}}</h5>
+                    <p class="card-text"> {{a.beschrijving}} </p>
+                </div>
+            </div>
+            {% endfor %}
+            </div>
+
+
+        <footer>
+            <p>training factor &copy; 2019 copyright: Luciano</p>
+        </footer>
+     </div>
+    </div>
+    </div>
+
+
+{% endblock %}
