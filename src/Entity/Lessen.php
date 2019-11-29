@@ -17,7 +17,7 @@ class Lessen
     private $id;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="datetime")
      */
     private $tijd;
 
@@ -36,12 +36,12 @@ class Lessen
         return $this->id;
     }
 
-    public function getTijd(): ?\DateTimeInterface
+    public function getTijd(): ?\datetime
     {
         return $this->tijd;
     }
 
-    public function setTijd(\DateTimeInterface $tijd): self
+    public function setTijd(\datetime $tijd): self
     {
         $this->tijd = $tijd;
 

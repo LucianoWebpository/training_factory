@@ -4,6 +4,8 @@
 namespace App\Controller;
 
 
+use App\Entity\Lessen;
+use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Activiteiten;
@@ -32,6 +34,25 @@ class DirecteurController extends AbstractController
         $entityManager->flush();
 
         return new Response('activiteiten zijn toegevoegd '.$activiteit->getId());
+    }
+    /**
+     * @Route("/les/toevoegen", name="create_les")
+     */
+    public function createLesAction(): Response{
+        $entityManager=$this->getDoctrine()->getManager();
+
+        $les = new Lessen();
+//        $tijd = new DateTime('2018-12-31 13:05:21');
+        $tijd = new \DateTime('@'.strtotime('now'));
+        $les->setTijd($tijd);
+        $les->setLocatie('Den Haag');
+        $les->setMaxPersonen('14');
+        $entityManager->persist($les);
+
+
+        $entityManager->flush();
+
+        return new Response('lessen zijn toegevoegd '.$les->getId());
     }
 
     /**
