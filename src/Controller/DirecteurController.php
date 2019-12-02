@@ -5,12 +5,15 @@ namespace App\Controller;
 
 
 use App\Entity\Lessen;
+use App\form\type\ActiviteitType;
 use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Activiteiten;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+
 
 class DirecteurController extends AbstractController
 {
@@ -42,8 +45,8 @@ class DirecteurController extends AbstractController
         $entityManager=$this->getDoctrine()->getManager();
 
         $les = new Lessen();
-//        $tijd = new DateTime('2018-12-31 13:05:21');
-        $tijd = new \DateTime('@'.strtotime('now'));
+        $tijd = new DateTime('2018-12-31 13:05:21');
+
         $les->setTijd($tijd);
         $les->setLocatie('Den Haag');
         $les->setMaxPersonen('14');
@@ -56,6 +59,22 @@ class DirecteurController extends AbstractController
     }
 
     /**
+     * @Route("directeur/activiteit/form", name="dir_form_show")
+     */
+    public function new(Request $request)
+    {
+        // creates a task object and initializes some data for this example
+        $activiteit = new Activiteiten();
+
+
+        $form = $this->createForm(ActiviteitType::class, $activiteit);
+
+
+        return $this->render('/directeur/form.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
+    /**
      * @Route("directeur/activiteit/{id}", name="dir_activiteit_show")
      */
     public function showAction($id)
@@ -66,17 +85,22 @@ class DirecteurController extends AbstractController
 
         if (!$activiteit) {
             throw $this->createNotFoundException(
-                'No product found for id '.$id
+                'No product found for id ' . $id
             );
         }
 
-        return $this->render("/directeur/showActiviteit.html.twig" , [
-            'activiteit'=>$activiteit]);
-
+        return $this->render("/directeur/showActiviteit.html.twig", [
+            'activiteit' => $activiteit]);
 
 
         // or render a template
         // in the template, print things with {{ product.name }}
         // return $this->render('product/show.html.twig', ['product' => $product]);
     }
+
+
+
+
+
+
 }

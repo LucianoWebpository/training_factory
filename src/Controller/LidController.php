@@ -24,7 +24,7 @@ class LidController extends AbstractController
             );
         }
 
-        return $this->render("/lid/showLid.html.twig" , [
+        return $this->render("/lid/kalender.html.twig" , [
             'lessen'=>$les]);
 
 
@@ -33,9 +33,6 @@ class LidController extends AbstractController
         // in the template, print things with {{ product.name }}
         // return $this->render('product/show.html.twig', ['product' => $product]);
     }
-    public function showLessenAction(){
-        return $this->render("/lid/showContact.html.twig");
 
-    }
 
 }
