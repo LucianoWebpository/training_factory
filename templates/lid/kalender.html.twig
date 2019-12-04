@@ -26,7 +26,7 @@
                 <div class="card">
                     <img src="{{ asset('img/' ~ l.naam ~ '.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{l.tijd}}</h5>
+                        <h5 class="card-title">{{ l.tijd|date("d/m/Y g:i", "UTC") }}</h5>
                         <p class="card-text"> {{l.locatie}} </p>
                         <p class="card-text"> {{l.maxpersonen}} </p>
                     </div>
