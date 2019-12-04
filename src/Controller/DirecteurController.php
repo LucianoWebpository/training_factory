@@ -69,7 +69,20 @@ class DirecteurController extends AbstractController
 
         $form = $this->createForm(ActiviteitType::class, $activiteit);
 
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $activiteit = $form->getData();
 
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+             $entityManager = $this->getDoctrine()->getManager();
+             $entityManager->persist($activiteit);
+             $entityManager->flush();
+
+            return $this->redirectToRoute('dir_form_show');
+        }
         return $this->render('/directeur/form.html.twig', [
             'form' => $form->createView(),
         ]);

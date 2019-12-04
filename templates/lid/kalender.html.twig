@@ -11,10 +11,10 @@
         <article>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">tijden – check de lestijden hieronder</h5>
-                    {% for les in lessen %}
-                    <p class="card-text"> {{ les.locatie }}  {{ les.maxpersonen }} </p>
-                    {% endfor %}
+                    <h5 class="card-title">Waarom Training factory? – boxen is niet zo geweldadig als je denkt</h5>
+                    <p class="card-text"> training factory is voor jong en oud wij halen het meeste uit boxen en andere sporten. vechtsporten worden vaak gezien als een geweldadige bezigheid wij kunnen laten zien dat dat niet zo hoeft te zijn
+
+                        u kunt op deze site informatie vinden over de vechtsporten die wij bieden</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
 
@@ -22,15 +22,16 @@
         </article>
 
         <div class="card-group">
-
+            {% for l in lessen %}
                 <div class="card">
-
+                    <img src="{{ asset('img/' ~ l.naam ~ '.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"> </p>
+                        <h5 class="card-title">{{l.tijd}}</h5>
+                        <p class="card-text"> {{l.locatie}} </p>
+                        <p class="card-text"> {{l.maxpersonen}} </p>
                     </div>
                 </div>
-
+            {% endfor %}
         </div>
 
 

@@ -31,6 +31,11 @@ class Lessen
      */
     private $max_personen;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $naam;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +73,18 @@ class Lessen
     public function setMaxPersonen(int $max_personen): self
     {
         $this->max_personen = $max_personen;
+
+        return $this;
+    }
+
+    public function getNaam(): ?string
+    {
+        return $this->naam;
+    }
+
+    public function setNaam(string $naam): self
+    {
+        $this->naam = $naam;
 
         return $this;
     }
