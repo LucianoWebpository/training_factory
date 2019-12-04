@@ -11,11 +11,11 @@
         <article>
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Waarom Training factory? – boxen is niet zo geweldadig als je denkt</h5>
-                    <p class="card-text"> training factory is voor jong en oud wij halen het meeste uit boxen en andere sporten. vechtsporten worden vaak gezien als een geweldadige bezigheid wij kunnen laten zien dat dat niet zo hoeft te zijn
+                    <h5 class="card-title">actuele planning</h5>
 
-                        u kunt op deze site informatie vinden over de vechtsporten die wij bieden</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+
+
                 </div>
 
             </div>
@@ -26,9 +26,12 @@
                 <div class="card">
                     <img src="{{ asset('img/' ~ l.naam ~ '.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{ l.tijd|date("d/m/Y g:i", "UTC") }}</h5>
+                        <h5 class="card-title">{{ l.tijd|date("d/m/Y") }}</h5>
                         <p class="card-text"> {{l.locatie}} </p>
-                        <p class="card-text"> {{l.maxpersonen}} </p>
+                        <p class="card-text"> <p>max aantal personen:  {{l.maxpersonen}} </p>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted"> <b>{{ l.tijd|date('H:i') }} </b></small>
                     </div>
                 </div>
             {% endfor %}
