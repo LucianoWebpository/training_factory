@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/training_factory.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/training_factory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/form/type/UserType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/registreren.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +174,10 @@
       <workItem from="1575454023327" duration="11553000" />
       <workItem from="1575537847840" duration="136000" />
       <workItem from="1575538004286" duration="1240000" />
-      <workItem from="1575631627302" duration="2046000" />
+      <workItem from="1575631627302" duration="2124000" />
+      <workItem from="1575878081422" duration="2953000" />
+      <workItem from="1576051510341" duration="6340000" />
+      <workItem from="1576226168101" duration="6335000" />
     </task>
     <servers />
   </component>
@@ -196,17 +198,17 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="836" y="381" key="NewPhpClassDialog" timestamp="1575551824307">
+    <state x="836" y="381" key="NewPhpClassDialog" timestamp="1576233160414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="836" y="381" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575551824307" />
+    <state x="836" y="381" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576233160414" />
     <state x="566" y="209" key="SettingsEditor" timestamp="1575537983003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="566" y="209" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575537983003" />
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1575632299288">
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1576226169584">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1575632299288" />
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576226169584" />
   </component>
 </project>
