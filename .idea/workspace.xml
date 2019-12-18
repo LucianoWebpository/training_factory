@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/form/type/UserType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/bezoeker/registreren.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/instructeur/overzichtLessen.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/UserFixtures.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/InstructeurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InstructeurController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,10 @@
       <workItem from="1575631627302" duration="2124000" />
       <workItem from="1575878081422" duration="2953000" />
       <workItem from="1576051510341" duration="6340000" />
-      <workItem from="1576226168101" duration="6335000" />
+      <workItem from="1576226168101" duration="6337000" />
+      <workItem from="1576481909214" duration="1656000" />
+      <workItem from="1576578284189" duration="2113000" />
+      <workItem from="1576665368024" duration="7675000" />
     </task>
     <servers />
   </component>
@@ -198,6 +201,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1576673917229">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576673917229" />
     <state x="836" y="381" key="NewPhpClassDialog" timestamp="1576233160414">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -206,9 +213,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="566" y="209" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575537983003" />
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1576226169584">
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1576665378112">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576226169584" />
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1576665378112" />
   </component>
 </project>

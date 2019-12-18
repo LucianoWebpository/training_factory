@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {#<p>activiteit naam: </p>{{ activiteit.naam }} <br>#}
+    {#<p>activiteit: beschrijving</p>{{ activiteit.beschrijving }} <br>#}
+    {#    <p>activiteit: duur</p> {{ activiteit.duur }} <br>#}
+    {#    <p>activiteit: prijs</p>{{ activiteit.prijs }} <br>#}
+    <div class="wrapper">
+        {% block nav %} {% include 'bezoeker/navbarBezoeker.html.twig' %} {% endblock %}
+
+        <table class="table table-striped table-dark">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
+        <footer>
+            <p>training factory &copy; 2019 copyright: Luciano</p>
+        </footer>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}
