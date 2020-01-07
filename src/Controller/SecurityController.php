@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Activiteiten;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,7 +32,17 @@ class SecurityController extends AbstractController
      */
     public function logout()
     {
-        throw new \Exception('This method can be blank - it will be intercepted by the logout key on your firewall');
-        return $this->render("/lid/kalender.html.twig");
+        $activiteit = $this->getDoctrine()
+            ->getRepository(Activiteiten::class)
+            ->findAll();
+
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No products found '
+            );
+        }
+
+        return $this->render("/bezoeker/showActiviteit.html.twig" , [
+            'activiteiten'=>$activiteit]);
     }
 }

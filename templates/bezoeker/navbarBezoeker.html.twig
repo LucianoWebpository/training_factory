@@ -14,10 +14,10 @@
                 <a class="nav-link" href="{{ path('bez_activiteit_show')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../../src/Controller/BezoekerController.php">trainingsaanbod</a>
+                <a class="nav-link" href="{{ path('bez_activiteit_show')}}">trainingsaanbod</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('lid_les_show')}}">lid worden</a>
+                <a class="nav-link" href="{{ path('bez_registreren')}}">lid worden</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="activiteiten.php">gedragsregels</a>
@@ -25,9 +25,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="registreren.php">contact</a>
             </li>
+
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('app_logout')}}">uitloggen</a>
             </li>
+            {% else %}<li class="nav-item">
+                <a class="nav-link" href="{{ path('app_login')}}">inloggen</a>
+            </li>
+            {% endif %}
         </ul>
 
     </div>

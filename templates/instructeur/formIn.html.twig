@@ -1,0 +1,37 @@
+{# templates/task/new.html.twig #}
+
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    {#<p>activiteit naam: </p>{{ activiteit.naam }} <br>#}
+    {#<p>activiteit: beschrijving</p>{{ activiteit.beschrijving }} <br>#}
+    {#    <p>activiteit: duur</p> {{ activiteit.duur }} <br>#}
+    {#    <p>activiteit: prijs</p>{{ activiteit.prijs }} <br>#}
+    <div class="wrapper">
+        {% block nav %} {% include 'bezoeker/navbarBezoeker.html.twig' %} {% endblock %}
+
+        <article>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">les aanpassen</h5>
+                    <p class="card-text">
+                        {{ form(form) }}
+
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+            </div>
+        </article>
+
+
+
+
+        <footer>
+            <p>training factory &copy; 2019 copyright: Luciano</p>
+        </footer>
+    </div>
+    </div>
+    </div>
+
+
+{% endblock %}

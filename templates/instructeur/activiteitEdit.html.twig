@@ -20,23 +20,23 @@
             </tr>
             </thead>
             <tbody>
-            {% for les in lessen %}
+            {% for lesa in lessen %}
             <tr>
 
 
 
-                <th scope="row">{{ les.id }}</th>
+                <th scope="row">{{ les.id }} </th>
                 <td>{{ les.naam}}</td>
                 <td> {{ les.tijd|date('H:i') }}</td>
                 <td>{{les.locatie}}</td>
                 <td>{{les.maxpersonen}}</td>
                 <td>{{ les.tijd|date("d/m/Y") }}</td>
-
+                <td> <a href="{{ path('delete_activiteit', {'id' : les.id}) }}"><button> delete</button></a></td>
+                <td> <a href="{{ path('delete_activiteit', {'id' : les.id}) }}"><button>aanpassen</button></a></td>
                 {% endfor %}
             </tr>
             </tbody>
         </table>
     </div>
-
 
 {% endblock %}

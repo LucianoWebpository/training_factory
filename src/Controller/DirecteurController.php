@@ -18,26 +18,26 @@ use Symfony\Component\HttpFoundation\Response;
 class DirecteurController extends AbstractController
 {
 
-    /**
-     * @Route("/activiteit/toevoegen", name="create_activiteit")
-     */
-    public function createActiviteitAction(): Response
-    {
-
-        $entityManager=$this->getDoctrine()->getManager();
-
-        $activiteit = new Activiteiten();
-        $activiteit->setNaam('boxen');
-        $activiteit->setBeschrijving('boxen voor jong en oud');
-        $activiteit->setDuur('2 uur');
-        $activiteit->setPrijs(50.00);
-        $entityManager->persist($activiteit);
-
-
-        $entityManager->flush();
-
-        return new Response('activiteiten zijn toegevoegd '.$activiteit->getId());
-    }
+//    /**
+//     * @Route("/activiteit/toevoegen", name="create_activiteit")
+//     */
+//    public function createActiviteitAction(): Response
+//    {
+//
+//        $entityManager=$this->getDoctrine()->getManager();
+//
+//        $activiteit = new Activiteiten();
+//        $activiteit->setNaam('boxen');
+//        $activiteit->setBeschrijving('boxen voor jong en oud');
+//        $activiteit->setDuur('2 uur');
+//        $activiteit->setPrijs(50.00);
+//        $entityManager->persist($activiteit);
+//
+//
+//        $entityManager->flush();
+//
+//        return new Response('activiteiten zijn toegevoegd '.$activiteit->getId());
+//    }
     /**
      * @Route("/les/toevoegen", name="create_les")
      */
