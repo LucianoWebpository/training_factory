@@ -20,7 +20,7 @@
             </tr>
             </thead>
             <tbody>
-            {% for lesa in lessen %}
+            {% for les in lessen %}
             <tr>
 
 
@@ -32,7 +32,7 @@
                 <td>{{les.maxpersonen}}</td>
                 <td>{{ les.tijd|date("d/m/Y") }}</td>
                 <td> <a href="{{ path('delete_activiteit', {'id' : les.id}) }}"><button> delete</button></a></td>
-                <td> <a href="{{ path('delete_activiteit', {'id' : les.id}) }}"><button>aanpassen</button></a></td>
+                <td> <a href="{{ path('aanpassen', {'id' : les.id}) }}"><button>aanpassen</button></a></td>
                 {% endfor %}
             </tr>
             </tbody>

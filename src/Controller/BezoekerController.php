@@ -47,7 +47,7 @@ class BezoekerController extends AbstractController
 
     }
     /**
-     * @Route("/bezoeker/registreren`/", name="bez_registreren")
+     * @Route("/bezoeker/registreren/", name="bez_registreren")
      */
     public function RegisterNewMemberAction(Request $request, UserPasswordEncoderInterface $passwordEncoder){
         $newMember= new User();

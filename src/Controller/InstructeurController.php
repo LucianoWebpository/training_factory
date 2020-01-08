@@ -5,8 +5,10 @@ namespace App\Controller;
 
 
 use App\Entity\Lessen;
+use App\form\type\LesType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class InstructeurController extends AbstractController
@@ -48,27 +50,38 @@ class InstructeurController extends AbstractController
         $enitymanager->remove($les);
         $enitymanager->flush();
 
-return $this->redirectToRoute("edit_act");
-}
+        return $this->redirectToRoute("edit_act");
+    }
+
     /**
-     * @Route("/instructeur/{id}" , name="aanpassen")
+     * @Route("/instructeur/update/{id}" , name="aanpassen")
      */
-    public function updateAction($id)
+    public function updateAction(Request $request, $id)
     {
         $entityManager = $this->getDoctrine()->getManager();
-        $les = $entityManager->getRepository(Lessen::class)->find($id);
+        $lessen = $entityManager->getRepository(Lessen::class)->find($id);
 
-        if (!$les) {
+        if (!$lessen) {
             throw $this->createNotFoundException(
-                'No product found for id '.$id
+                'No product found for id ' . $id
             );
         }
 
-        $les->setName('New product name!');
-        $entityManager->flush();
 
-        return $this->redirectToRoute('edit_act', [
-            'lesa' => $les->getId()
-        ]);
+        $form = $this->createForm(LesType::class, $lessen);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $lessen = $form->getData();
+            $entityManager->persist($lessen);
+            $entityManager->flush();
+
+
+            return $this->redirectToRoute('edit_act', [
+                'id' => $lessen->getId()]);
+        }
+        return $this->render('instructeur/formIn.html.twig' , [
+            'form' => $form->createView()]);
+
     }
+
 }
