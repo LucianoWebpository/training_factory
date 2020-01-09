@@ -36,6 +36,12 @@ class Lessen
      */
     private $naam;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Activiteiten", inversedBy="lessen")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $activiteit;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +91,18 @@ class Lessen
     public function setNaam(string $naam): self
     {
         $this->naam = $naam;
+
+        return $this;
+    }
+
+    public function getActiviteit(): ?Activiteiten
+    {
+        return $this->activiteit;
+    }
+
+    public function setActiviteit(?Activiteiten $activiteit): self
+    {
+        $this->activiteit = $activiteit;
 
         return $this;
     }

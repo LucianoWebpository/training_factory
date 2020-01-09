@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -35,6 +37,16 @@ class Activiteiten
      * @ORM\Column(type="float")
      */
     private $prijs;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Lessen", mappedBy="activiteit")
+     */
+    private $lessen;
+
+    public function __construct()
+    {
+        $this->lessen = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -85,6 +97,37 @@ class Activiteiten
     public function setPrijs(float $prijs): self
     {
         $this->prijs = $prijs;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Lessen[]
+     */
+    public function getLessen(): Collection
+    {
+        return $this->lessen;
+    }
+
+    public function addLessen(Lessen $lessen): self
+    {
+        if (!$this->lessen->contains($lessen)) {
+            $this->lessen[] = $lessen;
+            $lessen->setActiviteit($this);
+        }
+
+        return $this;
+    }
+
+    public function removeLessen(Lessen $lessen): self
+    {
+        if ($this->lessen->contains($lessen)) {
+            $this->lessen->removeElement($lessen);
+            // set the owning side to null (unless already changed)
+            if ($lessen->getActiviteit() === $this) {
+                $lessen->setActiviteit(null);
+            }
+        }
 
         return $this;
     }
