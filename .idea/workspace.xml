@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Activiteiten.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Activiteiten.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Lessen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lessen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191125080631.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191125083658.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191129092356.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191204110216.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191206113344.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Migrations/Version20191216131205.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/form/type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/type/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/registreren.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/registreren.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +181,7 @@
       <workItem from="1576665368024" duration="7675000" />
       <workItem from="1578383948041" duration="12247000" />
       <workItem from="1578481292736" duration="10166000" />
-      <workItem from="1578564262414" duration="1365000" />
+      <workItem from="1578564262414" duration="10938000" />
     </task>
     <servers />
   </component>
@@ -230,5 +226,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578564267885" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1578576916712">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578576916712" />
   </component>
 </project>

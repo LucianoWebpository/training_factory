@@ -56,7 +56,7 @@ class BezoekerController extends AbstractController
         if ($form->isSubmitted() && $form->isValid())
         {
             $newMember=$form->getData();
-            $newMember->setPassword($passwordEncoder->encodePassword($newMember, $form->get('plainPassword')->getData()));
+            $newMember->setPassword($passwordEncoder->encodePassword($newMember, $form->get('password')->getData()));
             $newMember->setRoles(['ROLE_MEMBER']);
             $entityManager=$this->getDoctrine()->getManager();
             $entityManager->persist(($newMember));

@@ -1,7 +1,28 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-{{ form_start(form) }}
-{{ form_row(form.email)}}
-{{ form_row(form.plainPassword)}}
-{{ form_end(form) }}
+<div class="wrapper">
+
+    {% block nav %} {% include 'bezoeker/navbarBezoeker.html.twig' %} {% endblock %}
+
+    <article>
+        <div class="card">
+            <div class="card-body">
+                {{ form_start(form) }}
+                {{ form_row(form.email)}}
+                {{ form_row(form.password)}}
+                {{ form_end(form) }}
+            </div>
+
+        </div>
+    </article>
+
+
+
+    <footer>
+        <p>training factory &copy; 2019 copyright: Luciano</p>
+    </footer>
+</div>
+</div>
+</div>
 {% endblock %}
+
