@@ -81,7 +81,7 @@ class DirecteurController extends AbstractController
              $entityManager->persist($activiteit);
              $entityManager->flush();
 
-            return $this->redirectToRoute('dir_form_show');
+            return $this->redirectToRoute('lijst_activiteit');
         }
         return $this->render('/directeur/form.html.twig', [
             'form' => $form->createView(),
@@ -110,9 +110,76 @@ class DirecteurController extends AbstractController
         // in the template, print things with {{ product.name }}
         // return $this->render('product/show.html.twig', ['product' => $product]);
     }
+    /**
+     * @Route("/directeur/activiteitEdit", name="lijst_activiteit")
+     */
+    public function editEntity()
+    {
+        $activiteit = $this->getDoctrine()
+            ->getRepository(Activiteiten::class)
+            ->findAll();
+
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No products found '
+            );
+        }
+
+        return $this->render("/directeur/activiteitLijst.html.twig", [
+            'activiteit' => $activiteit]);
+
+    }
+    /**
+     * @Route("/directeur/{id}" , name="delete_activiteit")
+     */
+    public function deleteAction($id)
+    {
+        $activiteit = $this->getDoctrine()
+            ->getRepository(Activiteiten::class)
+            ->find($id);
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No products found '
+            );
+        }
+        $enitymanager = $this->getDoctrine()->getManager();
+        $enitymanager->remove($activiteit);
+        $enitymanager->flush();
+
+        return $this->redirectToRoute("lijst_activiteit");
+    }
 
 
+    /**
+     * @Route("/instructeur/update/{id}" , name="aanpassen_activiteit")
+     */
+    public function updateAction(Request $request, $id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $activiteit = $entityManager->getRepository(Activiteiten::class)->find($id);
 
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+
+
+        $form = $this->createForm(ActiviteitType::class, $activiteit);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+           $activiteit = $form->getData();
+            $entityManager->persist($activiteit);
+            $entityManager->flush();
+
+
+            return $this->redirectToRoute('lijst_activiteit', [
+                'id' => $activiteit->getId()]);
+        }
+        return $this->render('directeur/activiteitAanpassen.html.twig' , [
+            'form' => $form->createView()]);
+
+    }
 
 
 

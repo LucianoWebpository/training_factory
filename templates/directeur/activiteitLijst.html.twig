@@ -13,26 +13,24 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">naam</th>
-                <th scope="col">tijd</th>
-                <th scope="col">locatie</th>
-                <th scope="col">max personen</th>
-                <th scope="col">datum</th>
+                <th scope="col">beschrijving</th>
+                <th scope="col">duur</th>
+                <th scope="col">prijs</th>
             </tr>
             </thead>
             <tbody>
-            {% for les in lessen %}
+            {% for a in activiteit %}
             <tr>
 
 
 
-                <th scope="row">{{ les.id }} </th>
-                <td>{{ les.naam}}</td>
-                <td> {{ les.tijd|date('H:i') }}</td>
-                <td>{{les.locatie}}</td>
-                <td>{{les.maxpersonen}}</td>
-                <td>{{ les.tijd|date("d/m/Y") }}</td>
-                <td> <a href="{{ path('delete_les', {'id' : les.id}) }}"><button> delete</button></a></td>
-                <td> <a href="{{ path('aanpassen', {'id' : les.id}) }}"><button>aanpassen</button></a></td>
+                <th scope="row">{{ a.id }} </th>
+                <td>{{ a.naam}}</td>
+                <td> {{ a.beschrijving}}</td>
+                <td>{{a.duur}}</td>
+                <td>{{a.prijs}}</td>
+                <td> <a href="{{ path('delete_activiteit', {'id' : a.id}) }}"><button> delete</button></a></td>
+                <td> <a href="{{ path('aanpassen_activiteit', {'id' : a.id}) }}"><button>aanpassen</button></a></td>
                 {% endfor %}
             </tr>
             </tbody>

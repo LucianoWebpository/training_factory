@@ -13,23 +13,32 @@
 {#                {{  link1 }}#}
                 <a class="nav-link" href="{{ path('bez_activiteit_show')}}">Home <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('bez_activiteit_show')}}">trainingsaanbod</a>
-            </li>
+            {% if is_granted('ROLE_ADMIN') %}
+           
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('dir_form_show')}}">activiteit toevoegen</a>
+                </li>
+            {% endif %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('bez_registreren')}}">lid worden</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="activiteiten.php">gedragsregels</a>
-            </li>
+
             <li class="nav-item">
                 <a class="nav-link" href="registreren.php">contact</a>
             </li>
+            {% if is_granted('ROLE_ADMIN') %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('lijst_activiteit')}}">activiteiten lijst</a>
+                </li>
+            {% endif %}
 
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('app_logout')}}">uitloggen</a>
             </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('bez_activiteit_show')}}">lessen</a>
+                </li>
             {% else %}<li class="nav-item">
                 <a class="nav-link" href="{{ path('app_login')}}">inloggen</a>
             </li>

@@ -34,7 +34,7 @@ class InstructeurController extends AbstractController
 
 
     /**
-     * @Route("/instructeur/{id}" , name="delete_activiteit")
+     * @Route("/instructeur/{id}" , name="delete_les")
      */
     public function deleteAction($id)
     {
