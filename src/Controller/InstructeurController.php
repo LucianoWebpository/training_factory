@@ -83,5 +83,33 @@ class InstructeurController extends AbstractController
             'form' => $form->createView()]);
 
     }
+    /**
+     * @Route("Instructeur/les/form", name="inst_form_show")
+     */
+    public function new(Request $request)
+    {
+        // creates a task object and initializes some data for this example
+        $les= new Lessen();
 
+
+        $form = $this->createForm(LesType::class, $les);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $les = $form->getData();
+
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($les);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('lijst_activiteit');
+        }
+        return $this->render('/instructeur/lesToevoegen.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 }
