@@ -23,7 +23,7 @@ class LesType extends AbstractType
             'choice_label' => 'naam'
         ])
             ->add('tijd', DateTimeType::class)
-            ->add('naam', TextType::class)
+
             ->add('locatie', TextType::class)
             ->add('max_personen', TextType::class)
             ->add('save' , SubmitType::class);

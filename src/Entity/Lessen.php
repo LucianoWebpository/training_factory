@@ -31,10 +31,6 @@ class Lessen
      */
     private $max_personen;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $naam;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Activiteiten", inversedBy="lessen")
@@ -83,17 +79,9 @@ class Lessen
         return $this;
     }
 
-    public function getNaam(): ?string
-    {
-        return $this->naam;
-    }
 
-    public function setNaam(string $naam): self
-    {
-        $this->naam = $naam;
 
-        return $this;
-    }
+
 
     public function getActiviteit(): ?Activiteiten
     {

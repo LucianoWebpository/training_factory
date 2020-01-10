@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/instructeur/lesToevoegen.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DirecteurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DirecteurController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/InstructeurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InstructeurController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Lessen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lessen.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/form/type/LesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/type/LesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/navbarBezoeker.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +186,7 @@
       <workItem from="1578383948041" duration="12247000" />
       <workItem from="1578481292736" duration="10166000" />
       <workItem from="1578564262414" duration="11427000" />
-      <workItem from="1578642768220" duration="8818000" />
+      <workItem from="1578642768220" duration="10248000" />
     </task>
     <servers />
   </component>
@@ -210,10 +211,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="120" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578487298292" />
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578652040631">
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1578658673611">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578652040631" />
+    <state x="690" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578658673611" />
     <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1578384087966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

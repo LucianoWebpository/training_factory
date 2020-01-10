@@ -150,36 +150,6 @@ class DirecteurController extends AbstractController
     }
 
 
-    /**
-     * @Route("/instructeur/update/{id}" , name="aanpassen_activiteit")
-     */
-    public function updateAction(Request $request, $id)
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $activiteit = $entityManager->getRepository(Activiteiten::class)->find($id);
-
-        if (!$activiteit) {
-            throw $this->createNotFoundException(
-                'No product found for id ' . $id
-            );
-        }
-
-
-        $form = $this->createForm(ActiviteitType::class, $activiteit);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-           $activiteit = $form->getData();
-            $entityManager->persist($activiteit);
-            $entityManager->flush();
-
-
-            return $this->redirectToRoute('lijst_activiteit', [
-                'id' => $activiteit->getId()]);
-        }
-        return $this->render('directeur/activiteitAanpassen.html.twig' , [
-            'form' => $form->createView()]);
-
-    }
 
 
 
