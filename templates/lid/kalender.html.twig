@@ -13,19 +13,11 @@
                 <div class="card-body">
                     <h5 class="card-title">actuele planning</h5>
 
-
-
-
-                </div>
-
-            </div>
-        </article>
-
-        <div class="card-group">
-            {% for l in lessen %}
-                <div class="card">
-                    <img src="{{ asset('img/' ~ l.naam ~ '.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
+                    <div class="card-group">
+                        {% for l in lessen %}
+                                        <div class="card">
+                                            <img src="{{ asset('img/' ~ l.activiteit.naam ~ '.jpg') }}" class="card-img-top" alt="...">
+                                            <div class="card-body">
                         <h5 class="card-title">{{ l.tijd|date("d/m/Y") }}</h5>
                         <p class="card-text"> {{l.locatie}} </p>
                         <p class="card-text"> <p>max aantal personen:  {{l.maxpersonen}} </p>
@@ -34,7 +26,15 @@
                         <small class="text-muted"> <b>{{ l.tijd|date('H:i') }} </b></small>
                     </div>
                 </div>
-            {% endfor %}
+                {% endfor  %}
+
+
+                </div>
+
+            </div>
+        </article>
+
+
         </div>
 
 

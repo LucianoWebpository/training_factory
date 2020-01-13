@@ -88,6 +88,47 @@ class DirecteurController extends AbstractController
         ]);
     }
     /**
+     * @Route("directeur/activiteit/{id}", name="aanpassen_activiteit")
+     */
+    public function aanpassenActiviteitAction(Request $request,$id)
+    {
+        $activiteit = $this->getDoctrine()
+            ->getRepository(Activiteiten::class)
+            ->find($id);
+
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+
+        $form = $this->createForm(ActiviteitType::class, $activiteit);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // $form->getData() holds the submitted values
+            // but, the original `$task` variable has also been updated
+            $activiteit = $form->getData();
+
+            // ... perform some action, such as saving the task to the database
+            // for example, if Task is a Doctrine entity, save it!
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($activiteit);
+            $entityManager->flush();
+
+            return $this->redirectToRoute('lijst_activiteit');
+        }
+        return $this->render('/directeur/form.html.twig', [
+            'form' => $form->createView(),
+        ]);
+
+
+
+        // or render a template
+        // in the template, print things with {{ product.name }}
+        // return $this->render('product/show.html.twig', ['product' => $product]);
+    }
+    /**
      * @Route("directeur/activiteit/{id}", name="dir_activiteit_show")
      */
     public function showAction($id)

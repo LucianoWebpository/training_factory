@@ -4,10 +4,7 @@
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DirecteurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DirecteurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/InstructeurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/InstructeurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Lessen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lessen.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/type/LesType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/type/LesType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/instructeur/activiteitEdit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/lid/kalender.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lid/kalender.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,12 +119,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\training_factory\templates\directeur" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\training_factory\templates\bezoeker" />
       <recent name="C:\xampp\htdocs\training_factory\templates\lid" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\training_factory\templates\directeur" />
     </key>
   </component>
   <component name="RunManager">
@@ -187,6 +184,7 @@
       <workItem from="1578481292736" duration="10166000" />
       <workItem from="1578564262414" duration="11427000" />
       <workItem from="1578642768220" duration="10248000" />
+      <workItem from="1578910177251" duration="2441000" />
     </task>
     <servers />
   </component>
@@ -227,10 +225,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="566" y="209" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575537983003" />
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1578642768001">
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1578910566121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578642768001" />
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578910566121" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1578576916712">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
