@@ -5,7 +5,10 @@ namespace App\Controller;
 
 
 use App\Entity\Lessen;
+use App\Entity\User;
 use App\form\type\ActiviteitType;
+use App\form\type\UserType;
+use App\form\type\UserType2;
 use DateTime;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -171,7 +174,7 @@ class DirecteurController extends AbstractController
 
     }
     /**
-     * @Route("/directeur/{id}" , name="delete_activiteit")
+     * @Route("/directeur/delete/{id}" , name="delete_activiteit")
      */
     public function deleteAction($id)
     {
@@ -189,9 +192,92 @@ class DirecteurController extends AbstractController
 
         return $this->redirectToRoute("lijst_activiteit");
     }
+    /**
+     * @Route("/directeur/update/{id}" , name="aanpassen_activiteit")
+     */
+    public function updateAction(Request $request, $id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $activiteit = $entityManager->getRepository(Activiteiten::class)->find($id);
+        if (!$activiteit) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+        $form = $this->createForm(ActiviteitType::class, $activiteit);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $activiteit = $form->getData();
+            $entityManager->persist($activiteit);
+            $entityManager->flush();
+            return $this->redirectToRoute('lijst_activiteit', [
+                'id' => $activiteit->getId()]);
+        }
+        return $this->render('directeur/activiteitAanpassen.html.twig' , [
+            'form' => $form->createView()]);
+    }
 
 
+    /**
+     * @Route("/directeur/userLijst", name="lijst_user")
+     */
+    public function userShowAction()
+    {
+        $user = $this->getDoctrine()
+            ->getRepository(User::class)
+            ->findAll();
 
+        if (!$user) {
+            throw $this->createNotFoundException(
+                'No products found '
+            );
+        }
 
+        return $this->render("/directeur/userLijst.html.twig", [
+            'user' => $user]);
 
+    }
+    /**
+     * @Route("/directeur/deleteUser/{id}" , name="delete_user")
+     */
+    public function deleteUserAction($id)
+    {
+        $user = $this->getDoctrine()
+            ->getRepository(User::class)
+            ->find($id);
+        if (!$user) {
+            throw $this->createNotFoundException(
+                'No products found '
+            );
+        }
+        $enitymanager = $this->getDoctrine()->getManager();
+        $enitymanager->remove($user);
+        $enitymanager->flush();
+
+        return $this->redirectToRoute("lijst_user");
+    }
+    /**
+     * @Route("/directeur/updateUser/{id}" , name="aanpassen_user")
+     */
+    public function updateUserAction(Request $request, $id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($id);
+        if (!$user) {
+            throw $this->createNotFoundException(
+                'No product found for id ' . $id
+            );
+        }
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $activiteit = $form->getData();
+            $entityManager->persist($user);
+            $entityManager->flush();
+            return $this->redirectToRoute('lijst_user', [
+                'id' => $user->getId()]);
+        }
+        return $this->render('directeur/userAanpassen.html.twig' , [
+            'form' => $form->createView()]);
+    }
 }
