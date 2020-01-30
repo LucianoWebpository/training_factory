@@ -19,6 +19,22 @@ class LessenRepository extends ServiceEntityRepository
         parent::__construct($registry, Lessen::class);
     }
 
+    public function findLessenFromUser($user)
+    {
+
+
+        $entityManager = $this->getEntityManager();
+
+        $query = $entityManager->createQuery(
+            'SELECT l
+            FROM App\Entity\Lessen l
+             JOIN  l.registraties r
+            WHERE r.user = :user'
+        )->setParameter('user', $user);
+//        dd($query->getResult());
+        // returns an array of Product objects
+        return $query->getResult();
+    }
     // /**
     //  * @return Lessen[] Returns an array of Lessen objects
     //  */

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -37,6 +39,16 @@ class Lessen
      * @ORM\JoinColumn(nullable=false)
      */
     private $activiteit;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Registratie", mappedBy="les")
+     */
+    private $registraties;
+
+    public function __construct()
+    {
+        $this->registraties = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -91,6 +103,37 @@ class Lessen
     public function setActiviteit(?Activiteiten $activiteit): self
     {
         $this->activiteit = $activiteit;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Registratie[]
+     */
+    public function getRegistraties(): Collection
+    {
+        return $this->registraties;
+    }
+
+    public function addRegistraty(Registratie $registraty): self
+    {
+        if (!$this->registraties->contains($registraty)) {
+            $this->registraties[] = $registraty;
+            $registraty->setLessen($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRegistraty(Registratie $registraty): self
+    {
+        if ($this->registraties->contains($registraty)) {
+            $this->registraties->removeElement($registraty);
+            // set the owning side to null (unless already changed)
+            if ($registraty->getLessen() === $this) {
+                $registraty->setLessen(null);
+            }
+        }
 
         return $this;
     }

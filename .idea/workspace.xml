@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f1e8693-09a4-4247-b802-5e3eb987367a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/directeur/userAanpassen.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/bezoeker/contact.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DirecteurController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DirecteurController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/form/type/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/form/type/UserType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/LidController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/LidController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Lessen.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Lessen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Registratie.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Registratie.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/LessenRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/LessenRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/showActiviteit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/showActiviteit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/directeur/form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/directeur/form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/directeur/userAanpassen.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/directeur/userAanpassen.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/lid/kalender.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/lid/kalender.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -201,7 +207,11 @@
       <workItem from="1578564262414" duration="11427000" />
       <workItem from="1578642768220" duration="10248000" />
       <workItem from="1578910177251" duration="2554000" />
-      <workItem from="1579074315498" duration="11980000" />
+      <workItem from="1579074315498" duration="24994000" />
+      <workItem from="1579255714589" duration="3682000" />
+      <workItem from="1580217023267" duration="2874000" />
+      <workItem from="1580220916128" duration="871000" />
+      <workItem from="1580370720251" duration="5470000" />
     </task>
     <servers />
   </component>
@@ -242,13 +252,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="566" y="209" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1575537983003" />
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1579074315643">
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog" timestamp="1580370721650">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1579074315643" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1578576916712">
+    <state x="656" y="522" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580370721650" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1579256235696">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1578576916712" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1579256235696" />
   </component>
 </project>

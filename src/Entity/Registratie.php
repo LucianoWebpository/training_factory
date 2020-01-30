@@ -28,6 +28,8 @@ class Registratie
      */
     private $user;
 
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -56,4 +58,6 @@ class Registratie
 
         return $this;
     }
+
+
 }

@@ -14,7 +14,7 @@
                     <h5 class="card-title">actuele planning</h5>
 
                     <div class="card-group">
-                        {% for l in lessen %}
+                        {% for l in lessen %}   {% set showButon=0 %}
                                         <div class="card">
                                             <img src="{{ asset('img/' ~ l.activiteit.naam ~ '.jpg') }}" class="card-img-top" alt="...">
                                             <div class="card-body">
@@ -24,6 +24,17 @@
                     </div>
                     <div class="card-footer">
                         <small class="text-muted"> <b>{{ l.tijd|date('H:i') }} </b></small>
+                    {% if l in mijnLessen %}
+                    {% else  %}
+
+
+
+                            <a href="{{ path('lid_toevoegen', {'id' : l.id}) }}"><button> inschrijven</button></a>
+                    {% endif %}
+
+                       
+
+
                     </div>
                 </div>
                 {% endfor  %}

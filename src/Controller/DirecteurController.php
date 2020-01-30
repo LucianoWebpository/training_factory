@@ -268,6 +268,7 @@ class DirecteurController extends AbstractController
                 'No product found for id ' . $id
             );
         }
+//        $showField=0;
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
