@@ -15,33 +15,38 @@
                 <div class="card-body">
                     <h5 class="card-title">account aanpassen</h5>
                     <p class="card-text">
-                        <h5>email</h5>
-                        {{ form(form.email) }}
-                    <h5>naam</h5>
-                        {{ form(form.voornaam) }}
-                    <h5>achternaam</h5>
-                        {{ form(form.achternaam) }}
-                    <h5>prefix</h5>
-                        {{ form(form.prefix) }}
-                    <h5>geboortedatum</h5>
-                        {{ form(form.geboortedatum) }}
-                    <h5>geslacht</h5>
-                        {{ form(form.geslacht) }}
-                    <h5>gebruikersnaam</h5>
-                        {{ form(form.gebruikersnaam) }}
-                    <h5>aangenomen op</h5>
-                        {{ form(form.aangenomen) }}
-                    <h5>salaris</h5>
-                        {{ form(form.salaris) }}
-                    <h5>straatnaam</h5>
-                        {{ form(form.straatnaam) }}
-                    <h5>postcode</h5>
-                        {{ form(form.postcode) }}
-                    <h5>woonplaats</h5>
-                        {{ form(form.woonplaats) }}
+                        {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    <form>
+
+                        {{ form_row(form.email) }}
+
+                        {{ form_row(form.voornaam) }}
+
+                        {{ form_row(form.achternaam) }}
+
+                        {{ form_row(form.prefix) }}
+
+                        {{ form_row(form.geboortedatum) }}
+
+                        {{ form_row(form.geslacht) }}
+
+                        {{ form_row(form.gebruikersnaam) }}
+
+                        {{ form_row(form.aangenomen) }}
+
+                        {{ form_row(form.salaris) }}
+
+                        {{ form_row(form.straatnaam) }}
+
+                        {{ form_row(form.postcode) }}
+
+                        {{ form_row(form.woonplaats) }}
 
 
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+                        {{ form_end(form) }}
+                    </form>
                 </div>
 
             </div>

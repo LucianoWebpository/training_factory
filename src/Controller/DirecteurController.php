@@ -270,13 +270,15 @@ class DirecteurController extends AbstractController
         }
 //        $showField=0;
         $form = $this->createForm(UserType::class, $user);
+
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            $activiteit = $form->getData();
+            $user = $form->getData();
             $entityManager->persist($user);
             $entityManager->flush();
             return $this->redirectToRoute('lijst_user', [
                 'id' => $user->getId()]);
+
         }
         return $this->render('directeur/userAanpassen.html.twig' , [
             'form' => $form->createView()]);
