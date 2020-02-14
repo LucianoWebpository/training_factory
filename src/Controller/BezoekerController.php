@@ -42,11 +42,8 @@ class BezoekerController extends AbstractController
         // return $this->render('product/show.html.twig', ['product' => $product]);
     }
 
-    /**
-     * @Route("/contact/", name="contact_show")
-     */
     public function showContactAction(){
-        return $this->render("/bezoeker/contact.html.twig");
+        return $this->render("/bezoeker/showContact.html.twig");
 
     }
     /**

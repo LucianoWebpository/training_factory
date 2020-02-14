@@ -24,7 +24,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('contact_show')}}">contact</a>
+                <a class="nav-link" href="registreren.php">contact</a>
             </li>
             {% if is_granted('ROLE_ADMIN') %}
                 <li class="nav-item">
@@ -44,9 +44,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('lid_les_show')}}">planning</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('profiel_lid')}}">mijn profiel</a>
                 </li>
             {% else %}<li class="nav-item">
                 <a class="nav-link" href="{{ path('app_login')}}">inloggen</a>

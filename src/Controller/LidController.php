@@ -64,7 +64,7 @@ class LidController extends AbstractController
         return $this->redirectToRoute("lid_les_show");
     }
     /**
-     * @Route("/lid/profiel", name="profiel_lid")
+     * @Route("/lid/inschrijve/les/{id}", name="lid_toevoegen")
      */
     public function profileShow()
     {
@@ -72,9 +72,8 @@ class LidController extends AbstractController
             ->getRepository(User::class)
             ->find($this->getUser());
         if (!$user){
-            throw $this->createNotFoundException('no user found');
+            throw $this->createNotFoundException("no user found");
         }
-        return $this->render("/lid/profiel.html.twig",
-            ['user'=>$user]);
+        return $this->
     }
 }
