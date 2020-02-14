@@ -10,6 +10,8 @@ use App\form\type\ActiviteitType;
 use App\form\type\UserType;
 use App\form\type\UserType2;
 use DateTime;
+use http\Client\Request;
+use http\Client\Response;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\Activiteiten;
@@ -67,7 +69,7 @@ class DirecteurController extends AbstractController
     public function new(Request $request)
     {
         // creates a task object and initializes some data for this example
-        $activiteit = new Activiteiten();
+        $activiteit = new Activiteiten('karate', '');
 
 
         $form = $this->createForm(ActiviteitType::class, $activiteit);
